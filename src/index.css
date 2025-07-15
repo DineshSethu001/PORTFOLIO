@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+:root{
+    --color-primary:#F5ECD5;
+    --color-secondary:#393E46;
+    --primary-font :#EFEEEA;
+}
+
+.skill, .contact{
+    background-color: var(--color-primary);
+}
+
+footer{
+    color:var(--primary-font);
+}
