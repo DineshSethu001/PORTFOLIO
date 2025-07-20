@@ -1,6 +1,8 @@
 import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
+import Typewriter from 'typewriter-effect';
+
 
 export default function Footer() {
   return (
@@ -17,15 +19,30 @@ export default function Footer() {
 
         {/* Main Footer Section */}
         <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6">
-          
+
           {/* Left: Copyright */}
-          <p className="text-xs text-center md:text-left">
-            © 2025 Your Name. All rights reserved.
+          <p className="text-xl text-center md:text-left">
+            <Typewriter 
+     
+              options={{
+                strings: [
+                  '© 2025 <span class="text-purple-600  px-1 rounded">D-code</span>. All rights reserved.',
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 75,
+                deleteSpeed:50,
+                pauseFor:7000
+              }}
+            />
+
+
+
           </p>
 
           {/* Right: Subscription + Socials */}
           <div className="flex flex-col items-center md:items-end gap-4">
-            
+
             {/* Subscription Form */}
             <form className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-md">
               <label htmlFor="email" className="sr-only">Email</label>

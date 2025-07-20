@@ -1,53 +1,67 @@
-import React from 'react';
-import myPhoto from '../assets/img/final logo.png'; // Replace with your image path
-
-export default function AboutMe() {
+// src/pages/About.jsx
+export default function About() {
   return (
-    <section id="about" className=" w-full bg-white text-gray-800 py-12 px-4 md:px-12">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-
-        {/* Profile Photo */}
-        <div className="w-45 h-40 md:w-56 md:h-56 rounded overflow-hidden shadow-lg">
-          <img
-            src={myPhoto}
-            alt="Your Name"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Bio & Skills */}
-        <div className="flex-1">
-          <h2 className="text-3xl font-bold mb-4">About Me</h2>
-          <p className="text-base leading-relaxed mb-4">
-            I'm a passionate frontend developer with a background in Computer Science. 
-            I enjoy building clean, user-focused web applications and love exploring new technologies.
-          </p>
-          <p className="text-base leading-relaxed mb-6">
-            I’m particularly interested in React.js, UI/UX design, and creating intuitive user experiences.
-          </p>
-
-          {/* Key Skills */}
-          <h3 className="text-xl font-semibold mb-2">Key Skills</h3>
-          <ul className="list-disc list-inside mb-4">
-            <li>Responsive Web Design</li>
-            <li>Component-based Development</li>
-            <li>Version Control (Git)</li>
-            <li>Cross-browser Compatibility</li>
-          </ul>
-
-          {/* Tech Stack */}
-          <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
-          <div className="flex flex-wrap gap-3">
-            <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded">HTML</span>
-            <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded">CSS</span>
-            <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded">JavaScript</span>
-            <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded">React</span>
-            <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded">Tailwind CSS</span>
-            <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded">Git</span>
-            <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded">MERN</span>
+    <div className="w-full h-screen bg-white px-4 py-2 overflow-hidden ">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
+        
+        {/* Left Section */}
+        <div className="w-full lg:w-1/3 space-y-4">
+          <div className="bg-gray-400 text-white text-center py-4 rounded-md shadow">
+            <h1 className="text-2xl font-bold">About Me</h1>
+          </div>
+          <div className="bg-gray-100 p-4 rounded-md shadow">
+            <h2 className="text-xl font-semibold mb-2">Skills</h2>
+            <ul className="list-disc list-inside space-y-1">
+              <li>React.js</li>
+              <li>Tailwind CSS</li>
+              <li>Bootstrap</li>
+              <li>REST API Integration</li>
+              <li>Git & GitHub</li>
+              <li>MERN Stack (Learning)</li>
+            </ul>
           </div>
         </div>
+
+        {/* Right Section */}
+        <div className="w-full lg:w-2/3 bg-yellow-100 p-6 rounded-md shadow space-y-4">
+          <p>
+            Hi, I'm <strong>Dinesh Thanigaivel</strong> — a passionate Front-End Developer
+            with a focus on building responsive and modern web applications.
+          </p>
+          <p>
+            I specialize in <strong>React.js</strong>, <strong>Tailwind CSS</strong>, and <strong>Bootstrap</strong>,
+            turning UI/UX designs into clean, real-world applications.
+          </p>
+
+          <div>
+            <h3 className="font-semibold">🛠️ Projects:</h3>
+            <ul className="list-disc list-inside ml-4">
+              <li>🎵 Spotify clone</li>
+              <li>📰 Dynamic blog platform</li>
+              <li>🛒 Functional e-commerce site</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">💼 Practical Skills:</h3>
+            <ul className="list-disc list-inside ml-4">
+              <li>Frontend development</li>
+              <li>REST API integration</li>
+              <li>Git and team collaboration</li>
+            </ul>
+          </div>
+
+          <p>
+            🌱 Currently learning Full-Stack Development using the <strong>MERN Stack</strong> to
+            build scalable, end-to-end web applications.
+          </p>
+
+          <p>
+            💡 Always curious and open to new technologies, challenges, and learning opportunities
+            in the web development world.
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

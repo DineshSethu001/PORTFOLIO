@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Typewriter from 'typewriter-effect';
+
 import logo from '../assets/img/final logo.png';
 
 export default function Header() {
@@ -15,16 +17,30 @@ export default function Header() {
             <img src={logo} alt="logo" className="w-16 h-16" />
           </a>
           <div className="header-text text-xl font-bold text-[#393E46] tracking-widest">
-            Dinesh Thanigaivel
+             <Typewriter 
+     
+              options={{
+                strings: 
+                  "Dinesh Thanigaivel"
+                ,
+                autoStart: true,
+                loop: true,
+                delay: 100 ,
+                deleteSpeed:75,
+                pauseFor:5000
+              }}
+            />
           </div>
         </div>
 
         {/* Desktop Navigation Links */}
         <ul className="hidden md:flex gap-6 text-gray-700 text-sm font-medium">
+          <li><a href="#about" className="hover:text-blue-600">Home</a></li>
           <li><a href="#about" className="hover:text-blue-600">About</a></li>
           <li><a href="#skills" className="hover:text-blue-600">Skills</a></li>
           <li><a href="#projects" className="hover:text-blue-600">Projects</a></li>
           <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
+          <li><a href="#contact" className="hover:text-blue-600">Blog</a></li>
         </ul>
 
         {/* Hamburger Icon (Mobile) */}
@@ -41,6 +57,7 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg py-4">
           <ul className="flex flex-col items-center gap-4">
+            <li><a href="#about" className="text-gray-700 hover:text-blue-600">Home</a></li>
             <li><a href="#about" className="text-gray-700 hover:text-blue-600">About</a></li>
             <li><a href="#skills" className="text-gray-700 hover:text-blue-600">Skills</a></li>
             <li><a href="#projects" className="text-gray-700 hover:text-blue-600">Projects</a></li>
