@@ -1,7 +1,9 @@
 import React from 'react'
 import author from "../assets/img/author.png"
+import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
+  const navigate = useNavigate()
   return (
     <>
       <section
@@ -19,12 +21,11 @@ export default function Home() {
           <p className="text-lg md:text-xl max-w-2xl mb-8">
             I specialize in building responsive, high-performance web applications using MongoDB, Express, React, and Node.js. I’m passionate about clean code, intuitive UI, and scalable backend solutions.
           </p>
-          <a
-            href="#contact"
+          <button onClick={()=>navigate('/contact')}
             className="inline-block bg-purple-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-300"
           >
             Let’s Connect
-          </a>
+          </button>
 
         </div>
         {/* Author Image */}

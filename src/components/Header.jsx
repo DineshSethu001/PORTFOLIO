@@ -16,14 +16,14 @@ const navItems = [
 // Reusable NavLinks component
 const NavLinks = ({ className = '' }) => (
   <ul className={`gap-6 text-gray-700 text-sm font-medium ${className}`}>
-    {navItems.map((item) => (
-      <NavLink to={item.to} ><li key={item.href}  className="hover:text-blue-600">
-       
-          {item.label}
-        
-      </li>
-      </NavLink>
-    ))}
+   {navItems.map((item) => (
+  <NavLink key={item.to} to={item.to}>
+    <li className="hover:text-blue-600">
+      {item.label}
+    </li>
+  </NavLink>
+))}
+
   </ul>
 );
 
@@ -32,6 +32,7 @@ export default function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
+    <>
     <header className="bg-[#E9DFC3] w-full shadow-md sticky top-0 z-50">
       <nav className="container mx-auto px-4 md:px-8 flex justify-between items-center h-16">
         {/* Logo + Name */}
@@ -75,5 +76,6 @@ export default function Header() {
         </div>
       )}
     </header>
+    </>
   );
 }

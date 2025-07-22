@@ -2,7 +2,7 @@
 export default function About() {
   return (
     <>
-    <section id="about" className="w-full bg-white px-4 py-2 overflow-hidden ">
+    <section id="about" className="w-full bg-white px-4 py-2 overflow-hidden overflow-y-auto ">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
         
         {/* Left Section */}
