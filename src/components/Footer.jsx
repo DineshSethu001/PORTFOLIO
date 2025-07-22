@@ -22,19 +22,20 @@ export default function Footer() {
 
           {/* Left: Copyright */}
           <p className="text-xl text-center md:text-left">
-            <Typewriter 
-     
-              options={{
-                strings: [
-                  '© 2025 <span class="text-purple-600  px-1 rounded">D-code</span>. All rights reserved.',
-                ],
-                autoStart: true,
-                loop: true,
-                delay: 75,
-                deleteSpeed:50,
-                pauseFor:7000
-              }}
-            />
+         <Typewriter
+  options={{
+    strings: [
+      '© 2025 <span class="text-purple-600 px-1 rounded">D-code</span>. All rights reserved.'
+    ],
+    autoStart: true,
+    loop: true,
+    delay: 75,
+    deleteSpeed: 50,
+    pauseFor: 7000,
+    html: true, // ✅ Make sure this is present so the <span> works
+  }}
+/>
+
 
 
 

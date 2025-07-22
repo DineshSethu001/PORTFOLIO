@@ -6,10 +6,11 @@
     --primary-font :#EFEEEA;
 }
 
-.skill, .contact{
-    background-color: var(--color-primary);
+/* hide scrollbars across browsers */
+.no-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
-
-footer{
-    color:var(--primary-font);
+.no-scroll {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
 }

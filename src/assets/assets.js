@@ -6,16 +6,16 @@ import news from '../assets/img/news.png'
 // Skills section
 
 export const skillsWithColors = [
-    { name: "HTML5", color: "bg-orange-500 text-white" },
-    { name: "CSS3", color: "bg-blue-500 text-white" },
-    { name: "JavaScript", color: "bg-yellow-300 text-black" },
-    { name: "React", color: "bg-cyan-400 text-white" },
-    { name: "Tailwind CSS", color: "bg-teal-300 text-black" },
-    { name: "Git & GitHub", color: "bg-gray-800 text-white" },
-    { name: "Figma" , color: "bg-pink-500 text-white" },
-    { name: "Responsive Design", color: "bg-green-400 text-white" },
-    { name: "REST APIs", color: "bg-indigo-400 text-white" },
-  ];
+  { name: "HTML5", color: "bg-orange-500 text-white" },
+  { name: "CSS3", color: "bg-blue-500 text-white" },
+  { name: "JavaScript", color: "bg-yellow-300 text-black" },
+  { name: "React", color: "bg-cyan-400 text-white" },
+  { name: "Tailwind CSS", color: "bg-teal-300 text-black" },
+  { name: "Git & GitHub", color: "bg-gray-800 text-white" },
+  { name: "Figma", color: "bg-pink-500 text-white" },
+  { name: "Responsive Design", color: "bg-green-400 text-white" },
+  { name: "REST APIs", color: "bg-indigo-400 text-white" },
+];
 
 //   project section
 

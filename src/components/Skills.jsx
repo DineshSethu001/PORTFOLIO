@@ -26,38 +26,34 @@ export default function Skills() {
           </span>
         </h2>
         <p className="mb-10 text-base md:text-lg text-gray-600 font-semibold">
-          <Typewriter 
-          options={{
-            strings:"Technologies and tools I specialize in for crafting high-quality, performant applications.",
-            autoStart:true
-          }}/>
-</p>
+          <Typewriter
+            options={{
+              strings: "Technologies and tools I specialize in for crafting high-quality, performant applications.",
+              autoStart: true
+            }} />
+
+        </p>
+
         <div
-          className="flex flex-wrap justify-center gap-4 md:gap-6"
+          className="flex flex-wrap justify-center items-center gap-4 md:gap-6"
           data-aos="zoom-in-up"
         >
+
+
           {skillsWithColors.map((skill, idx) => (
             <div
               key={idx}
               data-aos={idx % 3 === 0 ? 'fade-up-right' : idx % 3 === 1 ? 'fade-up' : 'fade-up-left'}
-              className={`relative px-5 py-3 rounded-2xl shadow-lg hover:shadow-2xl transition-all border bg-white/80
+              className={`relative px-5 py-3 rounded-2xl shadow-lg hover:shadow-2xl transition-all border 
                 cursor-pointer min-w-[120px] flex items-center gap-2 
                 hover:-translate-y-2 hover:scale-105 duration-300
                 group`}
-              style={{
-                background: `linear-gradient(90deg, ${skill.color}30 0%, #fff 80%)`, // color as light bg
-              }}
+
             >
-              {/* Skill Icon if exists */}
-              {skill.icon && (
-                <img src={skill.icon} alt="" className="w-6 h-6 mr-2 opacity-90"/>
-              )}
+
               <span
-                className="font-semibold tracking-wide text-lg md:text-xl"
-                style={{
-                  color: skill.color, // color per skill
-                  textShadow: "0 1px 6px #fff9"
-                }}
+                className={`px-3 py-1 rounded-full ${skill.color}`}
+
               >
                 {skill.name}
               </span>
