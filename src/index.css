@@ -14,3 +14,12 @@
   -ms-overflow-style: none;  /* IE/Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+iframe {
+  pointer-events: none;
+}
+@layer base{
+  body{
+    @apply bg-white overflow-x-hidden h-screen relative font-sans;
+  }
+}
