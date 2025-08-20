@@ -29,7 +29,7 @@ export default function Home() {
 
         </div>
         {/* Author Image */}
-        <div className="w-full md:w-1/2 flex justify-center items-center pb-8 md:pb-0">
+        <div className=" w-full md:w-1/2 flex justify-center items-center pb-8 md:pb-0">
           <img
             src={author}
             alt="author"

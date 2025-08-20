@@ -10,19 +10,37 @@ const navItems = [
   { label: 'Skills', to: '/skills' },
   { label: 'Projects', to: '/projects' },
   { label: 'Contact', to: '/contact' },
-  { label: 'Blog', to: '/blog' },
+{ label: "Blog", href: "https://blog-app-mern-phi.vercel.app" }
 ];
 
 // Reusable NavLinks component
 const NavLinks = ({ className = '' }) => (
   <ul className={`gap-6 text-gray-700 text-sm font-medium ${className}`}>
-   {navItems.map((item) => (
+   {/* {navItems.map((item) => (
   <NavLink key={item.to} to={item.to}>
     <li className="hover:text-blue-600">
       {item.label}
     </li>
   </NavLink>
-))}
+))} */}
+
+{navItems.map((item, index) =>
+  item.href ? (
+    <a
+      key={index}
+      href={item.href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {item.label}
+    </a>
+  ) : (
+    <Link key={index} to={item.to}>
+      {item.label}
+    </Link>
+  )
+)}
+
 
   </ul>
 );

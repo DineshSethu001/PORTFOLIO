@@ -31,22 +31,29 @@ export default function Skills() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {Object.entries(skillData).map(([category, skills], idx) => (
-            <div key={category} data-aos="fade-up" data-aos-delay={idx * 100}>
-              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-[#393e46] underline underline-offset-4">
-                {category}
-              </h3>
-              <ul className="space-y-2">
-                {skills.map((skill, i) => (
-                  <li
-                    key={i}
-                    className="bg-white text-gray-700 px-3 py-2 rounded-lg shadow hover:shadow-md hover:scale-105 transform transition-all duration-300 text-sm sm:text-base"
-                  >
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+  <div
+    key={category}
+    data-aos="fade-up"
+    data-aos-delay={window.innerWidth <= 640 ? idx * 500 : idx * 100} // slow down on mobile
+  >
+    <h3 className="text-lg sm:text-xl font-semibold mb-3 text-[#393e46] underline underline-offset-4">
+      {category}
+    </h3>
+    <ul className="space-y-2">
+      {skills.map((skill, i) => (
+        <li
+          key={i}
+          data-aos={i % 2 === 0 ? "fade-down-right" : "fade-down-left"}
+          data-aos-delay={window.innerWidth <= 640 ? i * 200 : i * 500} 
+          className="bg-white text-gray-700 px-3 py-2 rounded-lg shadow hover:shadow-md hover:scale-105 transform transition-all duration-300 text-sm sm:text-base"
+        >
+          {skill}
+        </li>
+      ))}
+    </ul>
+  </div>
+))}
+
         </div>
       </div>
     </section>
