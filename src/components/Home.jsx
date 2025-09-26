@@ -6,6 +6,7 @@ export default function Home() {
   const navigate = useNavigate()
   return (
     <>
+    
       <section
         className="flex flex-col items-center md:flex-row w-full  text-gray-800 py-12 sm:py-16 px-4 sm:px-6 md:px-12 bg-gradient-to-b from-[#f6f5ee] to-[#e9dfc3]"
       >

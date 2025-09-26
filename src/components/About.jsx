@@ -52,10 +52,10 @@ export default function About() {
             </ul>
           </div>
 
-          <p>
-            🌱 Currently learning Full-Stack Development using the <strong>MERN Stack</strong> to
-            build scalable, end-to-end web applications.
-          </p>
+     <p>
+  🌱 Upskilled in <strong>MERN Stack Full-Stack Development</strong>, building scalable web applications
+  from frontend to backend with practical experience.
+</p>
 
           <p>
             💡 Always curious and open to new technologies, challenges, and learning opportunities
