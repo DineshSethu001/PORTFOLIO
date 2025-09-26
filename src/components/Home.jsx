@@ -23,7 +23,7 @@ export default function Home() {
             I specialize in building responsive, high-performance web applications using MongoDB, Express, React, and Node.js. I’m passionate about clean code, intuitive UI, and scalable backend solutions.
           </p>
           <button onClick={()=>navigate('/contact')}
-            className="inline-block bg-purple-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-300"
+            className="cursor-pointer inline-block bg-purple-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-300"
           >
             Let’s Connect
           </button>

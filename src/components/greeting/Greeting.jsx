@@ -53,9 +53,12 @@ function Greeting({ onDone }) {
           </button>
         </div>
       ) : (
-        <div className="text-6xl text-[#3D74B6]">
-          {greeting},<span className="text-[#657C6A]">{name}!</span>  👋
-        </div>
+       <div className="text-4xl text-[#3D74B6]">
+  {greeting}, <span className="text-[#657C6A]">{name}</span>! 👋
+  <br />
+  Thanks for visiting my work.
+</div>
+
       )}
     </div>
   );

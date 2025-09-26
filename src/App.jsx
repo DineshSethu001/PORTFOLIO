@@ -1,6 +1,5 @@
 import { Header, Home, Skills, About, Projects, Contact, Footer } from "./components";
 
-import Greeting from "./components/Greeting";
 import { Routes, Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
 
 import "./App.css";
