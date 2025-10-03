@@ -15,10 +15,24 @@ export default function Contact() {
     <section id="contact" className="w-full contact text-gray-800 p-4 md:px-12">
       <div className="max-w-4xl mx-auto text-center space-y-3">
         <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
-        <p className="mb-8 text-sm md:text-base">
-          Have a question or want to work together? Send me a message and I’ll
-          get back to you soon.
-        </p>
+  <div className="flex items-center overflow-hidden whitespace-nowrap w-full border-l-4 border-r-4 border-red-200 py-2">
+  <div className="animate-marquee flex">
+    <p className="text-sm md:text-base px-4">
+      Have a question or want to work together? Send me a message and I’ll
+      get back to you soon.
+    </p>
+    <p className="text-sm md:text-base px-4">
+      Have a question or want to work together? Send me a message and I’ll
+      get back to you soon.
+    </p>
+      <p className=" text-sm md:text-base px-4">
+      Have a question or want to work together? Send me a message and I’ll
+      get back to you soon.
+    </p>
+  </div>
+</div>
+
+
 
         {/* Contact Form */}
         <form className="flex flex-col space-y-6 items-center w-full">
