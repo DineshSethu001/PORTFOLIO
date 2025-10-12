@@ -10,19 +10,14 @@ const navItems = [
   { label: 'Skills', to: '/skills' },
   { label: 'Projects', to: '/projects' },
   { label: 'Contact', to: '/contact' },
-{ label: "Blog", href: "https://blog-app-mern-phi.vercel.app" }
+{ label: "Blog", to:"/blog" },
+{ label: "Admin Login", to:"/admin" }
 ];
 
 // Reusable NavLinks component
 const NavLinks = ({ className = '' }) => (
   <ul className={`gap-6 text-gray-700 text-sm font-medium ${className}`}>
-   {/* {navItems.map((item) => (
-  <NavLink key={item.to} to={item.to}>
-    <li className="hover:text-blue-600">
-      {item.label}
-    </li>
-  </NavLink>
-))} */}
+      
 
 {navItems.map((item, index) =>
   item.href ? (
@@ -85,14 +80,21 @@ export default function Header() {
             ))}
           </button>
         </div>
+      
       </nav>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg py-4">
-          <NavLinks className="flex flex-col items-center gap-4" />
+          <NavLinks 
+            className="flex flex-col items-center gap-4" 
+            isAdminLoggedIn={isAdminLoggedIn}
+            onLogout={handleLogout}
+          />
         </div>
       )}
+
+      
     </header>
     </>
   );

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import { Header,Greeting } from '../components'
+import { Header} from '../components'
 
 import RouteChangeLoader from '../components/RouteChangeLoader'
 
 const RootLayout = () => {
   return (
     <div className="h-screen overflow-y-auto overflow-x-hidden">
-      <Greeting/>
+      {/* <Greeting/> */}
       <RouteChangeLoader />
       <Header />
 
