@@ -17,11 +17,11 @@ const Projects = () => {
       My Projects
       <TbFileSpark className="text-[#4FB7B3]" />
     </h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
         {projectAsset.map((project, index) => (
           <div
             key={index}
-            className="bg-[#161b22] border border-[#30363d] rounded-lg shadow-sm hover:shadow-md transition duration-200"
+            className="bg-[#161b22] border border-[#30363d] rounded-lg shadow-sm hover:shadow-md transition duration-200 flex hover:translate-y-2 transform transition-all duration-300 ease-out"
           >
             <ProjectCard project={project} />
           </div>

@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiStyledcomponents } from "react-icons/si";
+import { SiTailwindcss, SiStyledcomponents,SiTensorflow } from "react-icons/si";
 
 import mix from '../../assets/project_images/mix.png'
 import e1 from "../../assets/project_images/e1.png";
@@ -8,8 +8,24 @@ import vi from '../../assets/project_images/vi1.png'
 import crypto_app from '../../assets/project_images/crypt_app.png'
 import Email from '../../assets/project_images/Email.png'
 import movie from '../../assets/project_images/movie.png'
+import aiImage from '../../assets/project_images/aiImage.png'
 
 const projectAsset = [
+ {
+  title: "AI Image Detector",
+  description:
+    "AI Image Detector is a smart web app that uses TensorFlow’s COCO-SSD model to identify objects within images directly in your browser. Built with React and styled using Tailwind CSS, it allows users to upload any image (or use a default one) and instantly see detected objects with confidence scores visualized through progress bars — no backend or API key required.",
+  tech: [
+    { name: "React", icon: FaReact, color: "text-blue-500" },
+    { name: "TensorFlow.js", icon: SiTensorflow, color: "text-yellow-500" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-sky-400" },
+    { name: "Node.js", icon: FaNodeJs, color: "text-green-600" },
+
+  ],
+  image: aiImage, // replace this with your imported image name
+  demo: "https://a-iimage-detector-react-ixna1jn3r-rulerds-projects.vercel.app/",
+  code: "https://github.com/DineshSethu001/AIimageDetector-react-",
+},
   {
     title: "Electronic E-commerce App",
     description:
