@@ -45,11 +45,11 @@ export default function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <>
-    <header className="bg-[#E9DFC3] w-full shadow-md sticky top-0 z-50">
-      <nav className="container mx-auto px-4 md:px-8 flex justify-between items-center h-16">
+    
+    <header className="bg-[#E2B59A] border-l-6 border-r-6 border-[#9E1C60]  flex justify-center shadow-md sticky top-0 z-50">
+      <nav className="container  px-4 rounded w-full px-4 md:px-8 flex justify-between items-center h-14 ">
         {/* Logo + Name */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center">
           <a href="/">
             <img src={logo} alt="logo" className="w-16 h-16" />
           </a>
@@ -96,6 +96,6 @@ export default function Header() {
 
       
     </header>
-    </>
+    
   );
 }

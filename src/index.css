@@ -46,7 +46,9 @@ iframe {
   font-family: "Poppins",sans-serif;
   font-weight: 400;
 }
-
+.contact{
+  height: 80vh;
+}
 /* contact heading animation */
 
 /* Add this in your CSS */
@@ -62,4 +64,13 @@ iframe {
 .animate-marquee {
   display: flex;
   animation: marquee 25s linear infinite;
+}
+/* Hide scrollbar for Chrome, Safari, Edge */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
 }

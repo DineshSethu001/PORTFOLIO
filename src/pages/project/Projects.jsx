@@ -1,31 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard.jsx";
 import projectAsset from "./ProjectAsset.js";
 import { FcIdea } from "react-icons/fc";
 import { TbFileSpark } from "react-icons/tb";
 
-
-
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(projectAsset[0]);
+
   return (
     <section
       id="projects"
-      className="bg-[#0d1117] rounded-2xl text-[#c9d1d9] min-h-screen py-12 px-6"
+      className="bg-[#A3B087] rounded-xl text-[#c9d1d9] h-[calc(100vh-56px)]
+                 py-4 px-8 overflow-y-auto scrollbar-hide"
     >
-        <h2 className="flex items-center justify-center gap-3 text-3xl font-Poppins text-center mb-12 text-[#f0f6fc]">
-      <FcIdea />
-      My Projects
-      <TbFileSpark className="text-[#4FB7B3]" />
-    </h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-        {projectAsset.map((project, index) => (
-          <div
-            key={index}
-            className="bg-[#161b22] border border-[#30363d] rounded-lg shadow-sm hover:shadow-md transition duration-200 flex hover:translate-y-2 transform transition-all duration-300 ease-out"
-          >
-            <ProjectCard project={project} />
-          </div>
-        ))}
+      {/* Title */}
+      <h2 className="flex items-center justify-center gap-3 text-3xl font-Poppins mb-8 text-[#f0f6fc]">
+        <FcIdea /> My Projects <TbFileSpark className="text-[#4FB7B3]" />
+      </h2>
+
+      {/* Layout */}
+      <div className="flex justify-center gap-12 items-center ">
+
+        {/* Project List */}
+        <div className="space-y-3 w-60">
+          {projectAsset.map((project, index) => (
+            <div
+              key={index}
+              className={`px-4 py-2 rounded-lg cursor-pointer transition
+                ${
+                  selectedProject.title === project.title
+                    ? "bg-[#6A9457] text-[#fffca7] shadow-md"
+                    : "bg-[#4C763B] text-[#FFFD8F] hover:bg-[#5b8b49]"
+                }`}
+              onClick={() => setSelectedProject(project)}
+            >
+              <p className="border-l border-r border-yellow-200 px-2 text-md">
+                {project.title}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Project Card */}
+        <div className=" flex-1 flex justify-center items-start">
+          {selectedProject && (
+            <div className="w-full max-w-xl">
+              <ProjectCard project={selectedProject} />
+            </div>
+          )}
+        </div>
+
       </div>
     </section>
   );

@@ -6,13 +6,13 @@ import RouteChangeLoader from '../components/RouteChangeLoader'
 
 const RootLayout = () => {
   return (
-    <div className="h-screen overflow-y-auto overflow-x-hidden">
+    <div className="">
       {/* <Greeting/> */}
       <RouteChangeLoader />
+      {/* Navbar */}
       <Header />
 
-      {/* Main scrollable content */}
-      <div className="mt-4 w-full h-auto flex flex-col flex-grow overflow-y-auto">
+      <div className="">
         <Outlet />
       </div>
     </div>

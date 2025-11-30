@@ -30,10 +30,10 @@ export default function Contact() {
   const wordCount =
     message.trim() === "" ? 0 : message.trim().split(/\s+/).length;
 
-  return (
+  return (  
     <section
       id="contact"
-      className="w-full contact text-gray-800 p-4 md:px-12"
+      className="contact w-full contact text-gray-800 p-4 md:px-12"
     >
       <div className="max-w-4xl mx-auto text-center space-y-3">
         <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
